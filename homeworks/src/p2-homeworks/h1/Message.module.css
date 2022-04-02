@@ -1,3 +1,110 @@
+.mainBack{
+    display: grid;
+    grid-template-areas:
+    "imageUserBack";
+    grid-template-rows: 1fr;
+    grid-template-columns: 305px;
+    width: 375px;
+    height: 110px;
+    background-color: chartreuse;
+    }
+.imageUserBack {
+    background-color: chartreuse;
+    display: grid;
+    grid-template-areas:
+    "imageBack userBack";
+    grid-template-columns:50px 325px;
+    grid-template-rows: 1fr;
+    width: 300px;
+    height: 110px;
+}
+
+.imageUserBack img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+.userBack {
+    grid-area: userBack;
+    margin-top: 5px;
+    height: 100px;
+    background-color: chartreuse;
+    display: grid;
+    grid-template-areas:
+            "user";
+}
+
+.user {
+    display: grid;
+    width: 320px;
+    grid-template-areas:
+            "name time"
+            "message time";
+    grid-template-columns:240px 60px;
+    grid-template-rows: 1fr 1fr;
+    grid-area: user;
+    background-color: darkgreen;
+    border-radius: 15px 15px 15px 0px;
+
+
+
+
+}
+.imageBack  {
+    grid-area: imageBack;
+    margin-top: 5px;
+    display: grid;
+    grid-template-areas:
+"emptyImage"
+"image";
+    height: 100px;
+    width: 50px;
+    background-color: darkgreen;
+
+}
+.emptyImage{
+    height: 50px;
+    width: 50px;
+    grid-area: emptyImage;
+    background-color: chartreuse;
+}
+.image {
+    background-color: darkgreen;
+    height: 50px;
+    width: 50px;
+    grid-area: image;
+    background-color: chartreuse;
+    border-radius: 0px 0px 25px 0px;
+
+}
+
+.name {
+    font-size: 30px;
+    color: purple;
+    height: 30px;
+    width: 240px;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-family: "AppleSystemUIFont";
+    grid-area: name;
+}
+
 .message {
+    color: paleturquoise;
+    font-size: 25px;
+    padding-left: 10px;
+    height: 40px;
+    width: 240px;
+    font-style: oblique 40deg;
+    grid-area: message;
+
+}
+
+.time {
+    color: green;
+    font-size: 25px;
+    font-family: "Al Bayan";
+    margin-top: 60px;
+    grid-area: time;
 
 }
