@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import GreetingContainer from './GreetingContainer'
+import AlternativeGreeting from "./AlternativeGreeting";
 
 // types
 type UsersType = Array<UserType>
@@ -26,8 +27,9 @@ function HW3() {
 
             <hr/>
             {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeGreeting/>*/}
+            <AlternativeGreeting users={users}/>
             <hr/>
+
         </div>
     )
 }

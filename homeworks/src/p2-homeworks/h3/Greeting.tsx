@@ -1,4 +1,4 @@
-import React, {ChangeEvent} from 'react'
+import React, {ChangeEvent, KeyboardEvent} from "react";
 import s from './Greeting.module.css'
 import {UserType} from "./HW3";
 
@@ -7,34 +7,36 @@ type GreetingPropsType = {
     users:Array<UserType>
     setNameCallback: (elem: string)=> void // need to fix any
     addUser: ()=>void // need to fix any
-    error: any // need to fix any
+    error: string // need to fix any
     totalUsers: number // need to fix any
+    onKeyPressHandler: (e: KeyboardEvent<HTMLInputElement>)=> void
 }
 
 // презентационная компонента (для верстальщика)
 const Greeting: React.FC<GreetingPropsType> = (
-    {name, setNameCallback, users, addUser, error, totalUsers} // деструктуризация пропсов
+    {name, setNameCallback, onKeyPressHandler, users, addUser, error, totalUsers} // деструктуризация пропсов
 ) => {
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setNameCallback(e.currentTarget.value)
     }
     const inputClass = s.error // need to fix with (?:)
-
-
+    const messageClass = s.errorMessage
+    const counterUsers = s.counter
 
     return (
         <div>
-            <input value={name} onChange={onChangeHandler} className={inputClass}/>
-            <span>{error}</span>
-            <button onClick={()=>addUser()}>add</button>
+            <input value={name} onChange={onChangeHandler} onKeyPress={(e)=>onKeyPressHandler(e)} className={error && inputClass}/>
+
+            <button onClick={()=>addUser()} >add</button>
+            <div className={error && messageClass}>{error}</div>
             <div>{users.map((u)=>{
                 return(
-                    <div>
-                        {u._id} {u.name}
+                    <div key={u._id}>
+                        {u.name}
                     </div>
                 )
             })}</div>
-            <span>{totalUsers}</span>
+            <span className={counterUsers}>Total users: {totalUsers}</span>
         </div>
     )
 }

@@ -1,7 +1,23 @@
 .someClass {
+    border: 2px solid black;
 
+}
+.emptyAlwaysClass {
+    border: 2px solid black;
+    background-color: grey;
 }
 
 .error {
     border: 1px solid red;
+}
+
+.errorMessage {
+    color: red;
+}
+
+.counter {
+    border: 2px solid black;
+    width: auto;
+;
+
 }
