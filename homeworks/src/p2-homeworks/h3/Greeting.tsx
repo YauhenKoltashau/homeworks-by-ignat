@@ -4,12 +4,12 @@ import {UserType} from "./HW3";
 
 type GreetingPropsType = {
     name: string // need to fix any
-    users:Array<UserType>
-    setNameCallback: (elem: string)=> void // need to fix any
-    addUser: ()=>void // need to fix any
+    users: Array<UserType>
+    setNameCallback: (elem: string) => void // need to fix any
+    addUser: () => void // need to fix any
     error: string // need to fix any
     totalUsers: number // need to fix any
-    onKeyPressHandler: (e: KeyboardEvent<HTMLInputElement>)=> void
+    onKeyPressHandler: (e: KeyboardEvent<HTMLInputElement>) => void
 }
 
 // презентационная компонента (для верстальщика)
@@ -25,18 +25,20 @@ const Greeting: React.FC<GreetingPropsType> = (
 
     return (
         <div>
-            <input value={name} onChange={onChangeHandler} onKeyPress={(e)=>onKeyPressHandler(e)} className={error && inputClass}/>
+            <input value={name} onChange={onChangeHandler} onKeyPress={(e) => onKeyPressHandler(e)}
+                   className={error && inputClass}/>
 
-            <button onClick={()=>addUser()} >add</button>
+            <button onClick={() => addUser()}>add</button>
             <div className={error && messageClass}>{error}</div>
-            <div>{users.map((u)=>{
-                return(
+            <div>{users.map((u) => {
+                return (
                     <div key={u._id}>
                         {u.name}
                     </div>
                 )
             })}</div>
             <span className={counterUsers}>Total users: {totalUsers}</span>
+
         </div>
     )
 }

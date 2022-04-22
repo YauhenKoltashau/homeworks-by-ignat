@@ -18,7 +18,7 @@ function HW3() {
     }
 
     return (
-        <div>
+        <div >
             <hr/>
             homeworks 3
 
@@ -27,9 +27,9 @@ function HW3() {
 
             <hr/>
             {/*для личного творчества, могу проверить*/}
-            <AlternativeGreeting users={users}/>
-            <hr/>
 
+            {users[0] && <AlternativeGreeting users={users}/>}
+            <hr/>
         </div>
     )
 }
