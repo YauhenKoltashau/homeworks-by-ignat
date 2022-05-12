@@ -8,11 +8,8 @@ function JuniorPlus() {
     return (
         <div>
             JuniorPlus
-            <HW1/>
-            <HW2/>
-            <HW3/>
-            <HW4/>
-            {/*<HW6/>*/}
+            {/*<HW12/>*/}
+            {/*<HW12Plus/>*/}
 
         </div>
     )

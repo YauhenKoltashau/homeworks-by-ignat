@@ -17,36 +17,29 @@ function Header() {
         <div>
             <div className={styles.backLinks} onMouseEnter={onMouseEnterHandler} onMouseLeave={onMouseLeaveHandler}>LINKS:
                 <div className={styles.navLinksPreJun}>
-                    {/*<NavLink to={'/header'}>Header</NavLink>*/}
                     {showNavLink ?
                         <div>
-                            <NavLink to={'/pre-junior'}>PRE_JUNIOR</NavLink>
+                            <NavLink className={(navData) => navData.isActive ? styles.isActive : styles.notActive } to={'/pre-junior'}>PRE_JUNIOR</NavLink>
                         </div> : ''}
 
                 </div>
                 <div className={styles.navLinksJun} >
-                    {/*<NavLink to={'/header'}>Header</NavLink>*/}
                     {showNavLink ?
                         <div>
-                            <NavLink to={'/junior'}>JUNIOR</NavLink>
+                            <NavLink className={(navData) => navData.isActive ? styles.isActive : styles.notActive  } to={'/junior'}>JUNIOR</NavLink>
+
                         </div> : ''}
 
                 </div>
                 <div className={styles.navLinksJunPlus} >
-                    {/*<NavLink to={'/header'}>Header</NavLink>*/}
                     {showNavLink ?
                         <div>
-                            <NavLink to={'/junior-plus'}>JUNIOR_PLUS</NavLink>
+                            <NavLink className={(navData) => navData.isActive ? styles.isActive : styles.notActive  } to={'/junior-plus'}>JUNIOR_PLUS</NavLink>
                         </div> : ''}
 
                 </div>
             </div>
-
-
-
         </div>
-
-
     )
 }
 

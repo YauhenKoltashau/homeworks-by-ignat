@@ -5,13 +5,14 @@ import Error404 from "./pages/Error404";
 import Junior from "./pages/Junior";
 import JuniorPlus from "./pages/JuniorPlus";
 
-export const PATH = {
-    PRE_JUNIOR: '/pre-junior',
-    JUNIOR: '/junior',
-    JUNIOR_PlUS: '/junior-plus',
-    HEADER: '/header'
-    // add paths
-}
+export const
+    PATH = {
+        PRE_JUNIOR: '/pre-junior',
+        JUNIOR: '/junior',
+        JUNIOR_PlUS: '/junior-plus',
+        HEADER: '/header'
+        // add paths
+    } as const
 
 function Pages() {
     return (
@@ -25,7 +26,6 @@ function Pages() {
                 <Route path={PATH.PRE_JUNIOR} element={<PreJunior/>}/>
                 <Route path={PATH.JUNIOR} element={<Junior/>}/>
                 <Route path={PATH.JUNIOR_PlUS} element={<JuniorPlus/>}/>
-
 
 
                 // add routes
