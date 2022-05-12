@@ -1,0 +1,31 @@
+.backLinks {
+    height: 40px;
+    background: green;
+    position: center;
+
+}
+.navLinksPreJun {
+    color: black;
+    margin: 3px;
+    padding: 3px;
+    display: inline-block;
+    background: yellow;
+
+}
+.navLinksJun {
+    color: black;
+    margin: 3px;
+    padding: 3px;
+    display: inline-block;
+    background: orange;
+
+}
+.navLinksJunPlus {
+    color: whitesmoke;
+    margin: 3px;
+    padding: 3px;
+    display: inline-block;
+    background: red;
+
+
+}

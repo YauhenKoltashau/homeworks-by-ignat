@@ -37,7 +37,10 @@ const Greeting: React.FC<GreetingPropsType> = (
                 error={error}
 
             />
-            <SuperButton onClick={addUser}> Add </SuperButton>
+            {name?<SuperButton onClick={addUser}> Add </SuperButton>: <SuperButton onClick={addUser}>
+                disabled
+            </SuperButton>}
+
             {/*<input value={name} onChange={onChangeHandler} onKeyPress={(e) => onKeyPressHandler(e)}*/}
             {/*       className={error && inputClass}/>*/}
 
