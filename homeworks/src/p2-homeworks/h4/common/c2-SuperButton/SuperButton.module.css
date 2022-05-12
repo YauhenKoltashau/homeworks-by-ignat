@@ -1,7 +1,17 @@
 .default {
-
+    margin: 3px;
+    width: 50px;
+    padding: 3px;
+    color: white;
+    border-radius: 5px;
+    background: grey;
 }
 
 .red {
+    margin: 3px;
+    width: 50px;
+    padding: 3px;
+    border-radius: 5px;
+    color: black;
     background: red;
 }

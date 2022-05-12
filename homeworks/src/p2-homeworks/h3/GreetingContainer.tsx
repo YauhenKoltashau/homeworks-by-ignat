@@ -25,17 +25,19 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
     const addUser = () => {
         if (name) {
             addUserCallback(name)
-            setName('')
+            // setName('')
             setTotalUsers(totalUsers + 1)
-        } else setError("title is required")
+        }
+        else setError("error")
     }
     const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
        if(e.key === 'Enter'){
            if (name) {
                addUserCallback(name)
-               setName('')
+               // setName('')
                setTotalUsers(totalUsers + 1)
-           } else setError("title is required")
+           }
+           else setError("error")
        }
     }
 

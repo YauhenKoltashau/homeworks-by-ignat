@@ -1,3 +1,32 @@
 .someClass {
+    border: 2px solid black;
+}
+.back{
+    margin: 1px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 4px;
+    width: 320px;
+    background: darkgrey ;
+}
+.affairName {
+    padding: 3px;
+    margin: 3px;
+    color: white;
+    border-radius: 5px;
+    width: 100px;
+    display: inline-block;
+    border: 2px solid black;
+    background: grey;
+}
 
+.affairPriority {
+    padding: 3px;
+    margin: 3px;
+    color: white;
+    border-radius: 5px;
+    width: 100px;
+    display: inline-block;
+    border: 2px solid black;
+    background: grey;
 }

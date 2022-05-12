@@ -4,7 +4,7 @@ import classes from "./HW1.module.css"
 const messageData = {
     avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
     name: 'Artem',
-    message: "How is it going?",
+    message: "How is it going? Lorem",
     time: '20:00',
 }
 

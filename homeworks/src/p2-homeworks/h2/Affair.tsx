@@ -1,5 +1,8 @@
 import React from 'react'
 import {AffairType} from "./HW2";
+import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
+import styles from './Affairs.module.css'
+import SuperCheckbox from "../h4/common/c3-SuperCheckbox/SuperCheckbox";
 
 
 type AffairPropsType = {
@@ -9,15 +12,20 @@ type AffairPropsType = {
 }
 
 function Affair(props: AffairPropsType) {
+
     const deleteCallback = () => {
         props.deleteAffairCallback(props.affair._id)
     }// need to fix
 
     return (
-        <div>
-            {props.affair.name}
+        <div className={styles.back}>
+            <div className={styles.affairName}>{props.affair.name} </div>
+            <SuperCheckbox/>
+            <div className={styles.affairPriority}>{props.affair.priority}</div>
 
-            <button onClick={deleteCallback}>X</button>
+            <SuperButton onClick={deleteCallback}  >Delete</SuperButton>
+
+            {/*<button onClick={deleteCallback}>X</button>*/}
         </div>
     )
 }
