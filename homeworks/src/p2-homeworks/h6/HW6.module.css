@@ -1,0 +1,39 @@
+.inputStyle {
+    border: 2px solid black;
+    background: black;
+    color: white;
+}
+.spanStyle{
+    width: 300px;
+    height: 500px;
+    background: black;
+    overflow: hidden;
+}
+.spanStyle{
+    display: inline-block;
+    width: 236px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    margin: 10px 20px;
+    padding: 0 16px 0 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    background: black;
+    text-overflow: ellipsis;
+    border: 1px solid green;
+    border-radius: 4px;
+    color: white;
+}
+
+.spanStyle:hover{
+    border: 1px solid blue;
+    cursor: pointer;
+}
+
+.spanStyle:hover::after{
+    font: normal normal normal 12px FontAwesome;
+    line-height: 30px;
+    content: "\f040";
+    float: right;
+}
