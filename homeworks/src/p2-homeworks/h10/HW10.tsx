@@ -1,14 +1,28 @@
 import React from 'react'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import {useDispatch, useSelector} from "react-redux";
+import {AppStoreType} from "./bll/store";
+import {initStateType, loadingAC} from "./bll/loadingReducer";
+import Spin from '../../assets/Spin.svg'
 
 function HW10() {
-    // useSelector, useDispatch
-    const loading = false
+    const state = useSelector<AppStoreType,initStateType>(state=>state.loading)
+    const dispatch = useDispatch()
 
+    const loading = state.isLoading
+    console.log(loading)
     const setLoading = () => {
-        // dispatch
-        // setTimeout
-        console.log('loading...')
+        dispatch(loadingAC(true))
+        setTimeout(()=>{
+            debugger
+            dispatch(loadingAC(false))
+            console.log('loading...')
+        },3000)
+        clearTimeout(setTimeout(()=>{
+            debugger
+            dispatch(loadingAC(false))
+            console.log('loading...')
+        },3000))
     };
 
     return (
@@ -19,7 +33,9 @@ function HW10() {
             {/*should work (должно работать)*/}
             {loading
                 ? (
-                    <div>крутилка...</div>
+                    <div >
+                        <img style={{width:'30px',height: '30px'}} src={Spin} alt={'spin'}/>
+                    </div>
                 ) : (
                     <div>
                         <SuperButton onClick={setLoading}>set loading...</SuperButton>
