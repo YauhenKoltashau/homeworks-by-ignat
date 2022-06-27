@@ -20,7 +20,6 @@ const initialPeople:UsersType = [
 
 function HW8() {
     const [people, setPeople] = useState<any>(initialPeople) // need to fix any
-    console.log('HW8')
     // need to fix any
     const finalPeople = people.map((p: any) => (
         <tr key={p._id}>
